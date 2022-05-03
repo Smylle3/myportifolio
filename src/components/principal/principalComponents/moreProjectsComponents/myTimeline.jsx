@@ -93,7 +93,7 @@ export default function MyTimeline() {
                 icon={<SiReact color="white" />}
             >
                 <CardInfo
-                    lang={[{ id: 1, name: 'React JS' }]}
+                    lang={[{ id: 1, name: 'React JS' }, { id: 2, name: 'Java' }]}
                     title="DSMovie"
                     resum="WebSite desenvolvido com ReactJs feito para avaliação de filmes e séries."
                     site
