@@ -2,7 +2,6 @@ import React from 'react'
 import { Center, Heading, Image } from '@chakra-ui/react'
 import ColorMode from 'functions/colorMode'
 import { Logo } from 'animation/Logo'
-import { ColorModeSwitcher } from 'theme/ColorModeSwitcher'
 import photo from '../../assets/perfil.jpg'
 
 export default function MobileNavBar() {
@@ -15,7 +14,6 @@ export default function MobileNavBar() {
             backdropBlur="10px"
             bgGradient={`linear(to-b, ${ColorMode('white', 'black')}, transparent, transparent)`}
         >
-            <ColorModeSwitcher />
             <Logo h="20vmin" />
             <Heading
                 fontWeight={400}
