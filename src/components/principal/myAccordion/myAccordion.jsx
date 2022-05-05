@@ -6,10 +6,14 @@ import {
     AccordionPanel,
     Button,
     Heading,
+    HStack,
     Image,
     Link,
+    Tag,
+    TagLeftIcon,
     Text,
 } from '@chakra-ui/react'
+
 import React, { useState } from 'react'
 import { handleOpen } from 'functions/openAccordion'
 import ColorMode from 'functions/colorMode'
@@ -42,6 +46,29 @@ export default function MyAccordion(props) {
                     _focus={{ outline: 0 }}
                     flexDirection="column"
                 >
+                    <HStack>
+                        <Tag
+                            color={ColorMode('gray.900', 'white')}
+                            bg={ColorMode('white', 'black')}
+                        >
+                            <TagLeftIcon boxSize="12px" as={props.frameIcon} /> {props.framework}
+                        </Tag>
+                        <Tag
+                            color={ColorMode('gray.900', 'white')}
+                            bg={ColorMode('white', 'black')}
+                        >
+                            <TagLeftIcon boxSize="12px" as={props.frameStyle} /> {props.styles}
+                        </Tag>
+                        {props.backend ? (
+                            <Tag
+                                color={ColorMode('gray.900', 'white')}
+                                bg={ColorMode('white', 'black')}
+                            >
+                                <TagLeftIcon boxSize="12px" as={props.frameBack} />{' '}
+                                {props.backend}
+                            </Tag>
+                        ) : null}
+                    </HStack>
                     <Heading fontWeight={300} fontSize={35} marginBottom={5}>
                         {props.title}
                     </Heading>
@@ -49,12 +76,13 @@ export default function MyAccordion(props) {
                     <AccordionIcon />
                 </AccordionButton>
                 <AccordionPanel>
-                    <Text mb={5} textAlign='justify' >{props.abreviation}</Text>
-                    <Link
-                        href={props.rep}
-                        style={{ textDecoration: 'none' }}
-                        isExternal
-                    >
+                    <Text mb={5} textAlign="justify">
+                        {props.date}
+                    </Text>
+                    <Text mb={5} textAlign="justify">
+                        {props.abreviation}
+                    </Text>
+                    <Link href={props.rep} style={{ textDecoration: 'none' }} isExternal>
                         <Button
                             variant="github"
                             _focus={{ outline: 0 }}
@@ -64,11 +92,7 @@ export default function MyAccordion(props) {
                             Repositório GitHub
                         </Button>
                     </Link>
-                    <Link
-                        href={props.site}
-                        style={{ textDecoration: 'none' }}
-                        isExternal
-                    >
+                    <Link href={props.site} style={{ textDecoration: 'none' }} isExternal>
                         <Button
                             variant="site"
                             _focus={{ outline: 0 }}
