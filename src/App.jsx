@@ -7,6 +7,8 @@ import backImage from './assets/bg.jpg'
 import backImageMobile from './assets/bgm.jpg'
 import MobileNavBar from 'components/mobileNavBar/mobileNavBar'
 import { Vertical } from 'animation/vertical'
+import { ColorModeSwitcher } from 'theme/ColorModeSwitcher'
+import { NavButtons } from 'components/navButtons'
 
 function App() {
     return (
@@ -17,16 +19,19 @@ function App() {
             bgSize="cover"
             bgRepeat="no-repeat"
         >
+            <ColorModeSwitcher />
             {useMobile() ? (
-                <MobileNavBar />
+                <>
+                    <NavButtons />
+                    <MobileNavBar />
+                    <Principal />
+                </>
             ) : (
                 <>
                     <SideBar />
                     <Vertical />
                 </>
             )}
-
-            <Principal />
         </Flex>
     )
 }
