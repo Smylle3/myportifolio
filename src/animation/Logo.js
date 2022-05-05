@@ -43,13 +43,9 @@ export const Logo = () => {
                     <IconButton
                         variant="github"
                         animation={animation}
-                        colorScheme="blackAlpha"
                         icon={<SiGithub size={25} />}
                         isRound
                         _focus={{ outline: 0 }}
-                        _hover={{
-                            boxShadow: `0px 0px 7px 3px ${ColorMode('black', 'white')}`,
-                        }}
                     />
                 </Link>
             </Box>
@@ -61,13 +57,9 @@ export const Logo = () => {
                     <IconButton
                         variant="github"
                         animation={animation}
-                        colorScheme="blackAlpha"
                         icon={<SiLinkedin size={25} />}
                         isRound
                         _focus={{ outline: 0 }}
-                        _hover={{
-                            boxShadow: `0px 0px 7px 3px ${ColorMode('black', 'white')}`,
-                        }}
                     />
                 </Link>
             </Box>
@@ -76,13 +68,9 @@ export const Logo = () => {
                     <IconButton
                         variant="github"
                         animation={animation}
-                        colorScheme="blackAlpha"
                         icon={<SiInstagram size={25} />}
                         isRound
                         _focus={{ outline: 0 }}
-                        _hover={{
-                            boxShadow: `0px 0px 7px 3px ${ColorMode('black', 'white')}`,
-                        }}
                     />
                 </Link>
             </Box>
@@ -94,13 +82,9 @@ export const Logo = () => {
                     <IconButton
                         variant="github"
                         animation={animation}
-                        colorScheme="blackAlpha"
                         icon={<SiWhatsapp size={25} />}
                         isRound
                         _focus={{ outline: 0 }}
-                        _hover={{
-                            boxShadow: `0px 0px 7px 3px ${ColorMode('black', 'white')}`,
-                        }}
                     />
                 </Link>
             </Box>
