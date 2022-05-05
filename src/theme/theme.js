@@ -9,7 +9,7 @@ const themes = extendTheme({
         sm: '300px',
         md: '480px',
         lg: '620px',
-        xl: '800px',
+        xl: '768px',
         xxl: '1000px',
     },
     fonts: {
