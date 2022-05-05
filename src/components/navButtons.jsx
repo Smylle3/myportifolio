@@ -3,15 +3,7 @@ import { IconButton, Flex, Tooltip } from '@chakra-ui/react'
 import { RiHomeLine } from 'react-icons/ri'
 import { AiOutlineAppstore, AiOutlineDatabase, AiOutlineControl } from 'react-icons/ai'
 import ColorMode from 'functions/colorMode'
-import {
-    Link,
-    Button,
-    Element,
-    Events,
-    animateScroll as scroll,
-    scrollSpy,
-    scroller,
-} from 'react-scroll'
+import { Link, animateScroll as scroll } from 'react-scroll'
 
 export const NavButtons = props => {
     function scrollTop() {
@@ -65,6 +57,7 @@ export const NavButtons = props => {
                 spy={true}
                 smooth={true}
                 duration={500}
+                offset={-20}
             >
                 <Tooltip
                     label="Projetos"
@@ -88,6 +81,7 @@ export const NavButtons = props => {
                 spy={true}
                 smooth={true}
                 duration={500}
+                offset={-20}
             >
                 <Tooltip
                     label="Skills"
