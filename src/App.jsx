@@ -1,21 +1,37 @@
-import SideBar from 'components/sideBar/sideBar'
+import React from 'react'
+import { Flex } from '@chakra-ui/react'
+import useMobile from 'functions/useMobile'
 import Principal from 'components/principal/principal'
+import SideBar from 'components/sideBar/sideBar'
 import backImage from './assets/bg.jpg'
-
-const { Flex } = require('@chakra-ui/react')
+import backImageMobile from './assets/bgm.jpg'
+import MobileNavBar from 'components/mobileNavBar/mobileNavBar'
+import { Vertical } from 'animation/vertical'
+import { ColorModeSwitcher } from 'theme/ColorModeSwitcher'
+import { NavButtons } from 'components/navButtons'
 
 function App() {
     return (
-        <Flex bgImage={backImage} bgPos="center" bgSize="cover" bgRepeat="no-repeat" h='100vh' >
-            <Flex
-                backdropFilter="auto"
-                backdropBlur="20px"
-                direction={{ dk: 'row', lg: 'column' }}
-                h='100%'
-            >
-                <SideBar />
-                <Principal />
-            </Flex>
+        <Flex
+            direction={{ base: 'column', xxl: 'row' }}
+            bgImage={useMobile() ? backImageMobile : backImage}
+            bgPos="center"
+            bgSize="cover"
+            bgRepeat="no-repeat"
+        >
+            <ColorModeSwitcher />
+            {useMobile() ? (
+                <>
+                    <NavButtons />
+                    <MobileNavBar />
+                    <Principal />
+                </>
+            ) : (
+                <>
+                    <SideBar />
+                    <Vertical />
+                </>
+            )}
         </Flex>
     )
 }
