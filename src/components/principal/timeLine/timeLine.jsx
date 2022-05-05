@@ -34,7 +34,7 @@ export default function TimeLine() {
 
     return (
         <ScaleFade initialScale={0.5} in={inViewport}>
-            <Flex color={ColorMode('white', 'black')} h="100%" ref={ref} p={2} >
+            <Flex color={ColorMode('white', 'black')} h="100%" ref={ref} p={4} >
                 <SimpleGrid columns={{ xl: 2 }} spacing={5} w="full" h="100%">
                     <ScaleFade in whileHover={{scale: 1.1}} >
                         <Flex
@@ -73,13 +73,12 @@ export default function TimeLine() {
 
                     <ScaleFade whileHover={{scale: 1.1}} in>
                         <Flex
-                            bg={ColorMode('white', 'gray.900')}
-                            color={ColorMode('black', 'white')}
+                            bg={ColorMode('gray.900', 'white')}
                             direction="column"
                             align="center"
                             p={3}
                             h="100%"
-                            boxShadow={`0px 0px 5px 1px  ${ColorMode('black', 'white')}`}
+                            boxShadow={`0px 0px 5px 1px  ${ColorMode('white', 'black')}`}
                             borderRadius={3}
                             
                         >
@@ -113,11 +112,11 @@ export default function TimeLine() {
                         <Flex
                             bg={ColorMode('white', 'gray.900')}
                             color={ColorMode('black', 'white')}
+                            boxShadow={`0px 0px 5px 1px  ${ColorMode('black', 'white')}`}
                             direction="column"
                             align="center"
                             p={3}
                             h="100%"
-                            boxShadow={`0px 0px 5px 1px  ${ColorMode('black', 'white')}`}
                             borderRadius={3}
                             
                         >
@@ -150,12 +149,13 @@ export default function TimeLine() {
 
                     <ScaleFade whileHover={{scale: 1.1}} in>
                         <Flex
-                            bg={ColorMode('gray.900', 'white')}
+                            bg={ColorMode('white', 'gray.900')}
+                            color={ColorMode('black', 'white')}
+                            boxShadow={`0px 0px 5px 1px  ${ColorMode('black', 'white')}`}
                             direction="column"
                             align="center"
                             p={3}
                             h="100%"
-                            boxShadow={`0px 0px 5px 1px  ${ColorMode('white', 'black')}`}
                             borderRadius={3}
                             
                         >
