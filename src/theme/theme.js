@@ -1,6 +1,10 @@
 import { extendTheme } from '@chakra-ui/react'
+import { MyButton as Button } from './buttonStyles'
 
 const themes = extendTheme({
+    components: {
+        Button,
+    },
     breakpoints: {
         sm: '300px',
         md: '480px',
@@ -17,7 +21,6 @@ const themes = extendTheme({
         global: props => ({
             'html, body': {
                 color: props.colorMode === 'dark' ? 'white' : 'gray.600',
-                
             },
         }),
     },
