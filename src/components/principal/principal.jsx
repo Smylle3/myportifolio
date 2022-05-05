@@ -11,6 +11,7 @@ import {
     SiReact,
     SiFirebase,
 } from 'react-icons/si'
+import Skills from './skills/skills'
 
 export default function Principal() {
     const ref = useRef(null)
@@ -90,13 +91,13 @@ export default function Principal() {
                     mb={10}
                     bgGradient={`linear(to-l, ${ColorMode('#FF0080','#7928CA')}, ${ColorMode('#7928CA', '#FF0080')})`}
                     bgClip={colorMode === 'dark' ? 'text' : 'unset'}
-
                     color={colorMode === 'dark' ? null : 'white'}
                 >
                     <Element name="skills" className="element">
                         Habilidades
                     </Element>
                 </Heading>
+                <Skills/>
             </Flex>
         </>
     )
