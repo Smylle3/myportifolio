@@ -7,6 +7,10 @@ import { Element } from 'react-scroll'
 import pokecoin from '../../assets/07.png'
 import pomodoro from '../../assets/pomo.png'
 import TimeLine from './timeLine/timeLine'
+import {
+    SiReact,
+    SiFirebase,
+} from 'react-icons/si'
 
 export default function Principal() {
     const ref = useRef(null)
@@ -17,7 +21,7 @@ export default function Principal() {
         {}
     )
     const {colorMode} = useColorMode()
-    
+
     return (
         <>
             <Flex
@@ -38,18 +42,28 @@ export default function Principal() {
                     <MyAccordion
                         title="PokéCoin"
                         image={pokecoin}
-                        abreviation="Oficialmente meu primeiro projeto, PokeCoin é uma plataforma de negociação de pokémons. Desenvolvido com ReactJs e bando de dados com Firebase realizei esse projeto para adquirir conhecimentos no desenvolvimento frontend. O período de desenvolvimento foi dado por volta de um mês, abril/2022."
+                        date='Abril / 2022'
+                        abreviation="Oficialmente meu primeiro projeto, PokeCoin é uma plataforma de negociação de pokémons. Desenvolvido com ReactJs e bando de dados com Firebase realizei esse projeto para adquirir conhecimentos no desenvolvimento frontend. O período de desenvolvimento foi dado por volta de um mês."
                         rep="https://github.com/Smylle3/poke_coin"
                         site="https://poke-coin.vercel.app/"
+                        framework='React Js'
+                        styles='Chakra Ui'
+                        backend='Firebase'
+                        frameIcon={SiReact}
+                        frameBack={SiFirebase}
                     />
                 </ScaleFade>
                 <ScaleFade initialScale={0.5} in={inViewport}>
                     <MyAccordion
                         title="My Pomodoro"
                         image={pomodoro}
-                        abreviation="Texto"
+                        date='Abril / 2022'
+                        abreviation="Aplicação realizada como desafio de criar cronômetro pomodoro para gerenciar tempo de trabalho e descanso. Feito com ReactJs e ChakraUI para estilização."
                         rep="https://github.com/Smylle3/mypomodore"
                         site="https://mypomodore.vercel.app/"
+                        framework='React Js'
+                        styles='Chakra Ui'
+                        frameIcon={SiReact}
                     />
                 </ScaleFade>
             </Flex>
@@ -69,11 +83,11 @@ export default function Principal() {
                 <TimeLine />
                 <Flex bg="white" borderRadius="full" h={1} mt={5} />
             </Flex>
-            <Flex direction="column" padding={5}>
+            <Flex direction="column" p={5} >
                 <Heading
                     fontWeight={800}
                     fontSize={40}
-                    marginBottom={10}
+                    mb={10}
                     bgGradient={`linear(to-l, ${ColorMode('#FF0080','#7928CA')}, ${ColorMode('#7928CA', '#FF0080')})`}
                     bgClip={colorMode === 'dark' ? 'text' : 'unset'}
 
