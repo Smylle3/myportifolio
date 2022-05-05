@@ -16,7 +16,7 @@ const spin = keyframes`
   to { transform: rotate(360deg); }
 `
 
-export const Logo = props => {
+export const Logo = () => {
     const prefersReducedMotion = usePrefersReducedMotion()
 
     const animation = prefersReducedMotion ? undefined : `${spin} infinite 30s linear`
@@ -41,9 +41,10 @@ export const Logo = props => {
             <Box>
                 <Link href="https://github.com/Smylle3" isExternal>
                     <IconButton
+                        variant="github"
                         animation={animation}
                         colorScheme="blackAlpha"
-                        icon={<SiGithub size={25} color="white" />}
+                        icon={<SiGithub size={25} />}
                         isRound
                         _focus={{ outline: 0 }}
                         _hover={{
@@ -58,9 +59,10 @@ export const Logo = props => {
                     isExternal
                 >
                     <IconButton
+                        variant="github"
                         animation={animation}
                         colorScheme="blackAlpha"
-                        icon={<SiLinkedin size={25} color="white" />}
+                        icon={<SiLinkedin size={25} />}
                         isRound
                         _focus={{ outline: 0 }}
                         _hover={{
@@ -72,9 +74,10 @@ export const Logo = props => {
             <Box>
                 <Link href="https://www.instagram.com/dompedro_iv/" isExternal>
                     <IconButton
+                        variant="github"
                         animation={animation}
                         colorScheme="blackAlpha"
-                        icon={<SiInstagram size={25} color="white" />}
+                        icon={<SiInstagram size={25} />}
                         isRound
                         _focus={{ outline: 0 }}
                         _hover={{
@@ -89,9 +92,10 @@ export const Logo = props => {
                     isExternal
                 >
                     <IconButton
+                        variant="github"
                         animation={animation}
                         colorScheme="blackAlpha"
-                        icon={<SiWhatsapp size={25} color="white" />}
+                        icon={<SiWhatsapp size={25} />}
                         isRound
                         _focus={{ outline: 0 }}
                         _hover={{
