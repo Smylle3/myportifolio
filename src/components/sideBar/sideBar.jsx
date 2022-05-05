@@ -21,7 +21,7 @@ export default function SideBar() {
                 align="center"
                 textAlign="center"
                 padding="25px 0px"
-                borderRadius={20}
+                borderRadius={10}
                 flexDirection="column"
                 overflowY="scroll"
                 css={{
