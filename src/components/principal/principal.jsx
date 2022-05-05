@@ -1,19 +1,12 @@
-import { Flex, Heading, ScaleFade } from '@chakra-ui/react'
+import { Flex, Heading, ScaleFade, useColorMode } from '@chakra-ui/react'
 import ColorMode from 'functions/colorMode'
 import React, { useRef } from 'react'
 import { useInViewport } from 'react-in-viewport'
 import MyAccordion from './myAccordion/myAccordion'
-import {
-    Link,
-    Button,
-    Element,
-    Events,
-    animateScroll as scroll,
-    scrollSpy,
-    scroller,
-} from 'react-scroll'
+import { Element } from 'react-scroll'
 import pokecoin from '../../assets/07.png'
 import pomodoro from '../../assets/pomo.png'
+import TimeLine from './timeLine/timeLine'
 
 export default function Principal() {
     const ref = useRef(null)
@@ -23,7 +16,8 @@ export default function Principal() {
         { disconnectOnLeave: false },
         {}
     )
-
+    const {colorMode} = useColorMode()
+    
     return (
         <>
             <Flex
@@ -54,20 +48,37 @@ export default function Principal() {
                         title="My Pomodoro"
                         image={pomodoro}
                         abreviation="Texto"
-                        rep=""
-                        site=""
+                        rep="https://github.com/Smylle3/mypomodore"
+                        site="https://mypomodore.vercel.app/"
                     />
                 </ScaleFade>
             </Flex>
-            <Flex h="100vh">
-                <Heading fontWeight={400} fontSize={40} marginBottom={10}>
+            <Flex direction="column" padding={5}>
+                <Heading
+                    fontWeight={400}
+                    fontSize={40}
+                    marginBottom={10}
+                    alignSelf="flex-end"
+                    bg={ColorMode('white', 'black')}
+                    color={ColorMode('black', 'white')}
+                >
                     <Element name="projetos" className="element">
                         Projetos
                     </Element>
                 </Heading>
+                <TimeLine />
+                <Flex bg="white" borderRadius="full" h={1} mt={5} />
             </Flex>
-            <Flex h="100vh">
-                <Heading fontWeight={400} fontSize={40} marginBottom={10}>
+            <Flex direction="column" padding={5}>
+                <Heading
+                    fontWeight={800}
+                    fontSize={40}
+                    marginBottom={10}
+                    bgGradient={`linear(to-l, ${ColorMode('#FF0080','#7928CA')}, ${ColorMode('#7928CA', '#FF0080')})`}
+                    bgClip={colorMode === 'dark' ? 'text' : 'unset'}
+
+                    color={colorMode === 'dark' ? null : 'white'}
+                >
                     <Element name="skills" className="element">
                         Habilidades
                     </Element>
