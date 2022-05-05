@@ -25,9 +25,6 @@ export default function MobileNavBar() {
                 Hi, I'm João Pedro, frontend developer.
             </Heading>
             <Image
-                pos="absolute"
-                bottom={5}
-                left={5}
                 alt="text"
                 src={photo}
                 w="10em"
