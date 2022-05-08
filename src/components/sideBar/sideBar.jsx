@@ -4,12 +4,10 @@ import { Center, Flex, Heading, Image, Text } from '@chakra-ui/react'
 import photo from '../../assets/perfil.jpg'
 import ColorMode from 'functions/colorMode'
 import TextGroup from './components/textGroup'
-import { ColorModeSwitcher } from 'theme/ColorModeSwitcher'
 
 export default function SideBar() {
     return (
         <Center w="20%">
-            <ColorModeSwitcher />
             <Flex
                 border={`2px solid ${ColorMode('white', 'orange')}`}
                 bgGradient={`linear(to-b, ${ColorMode('white', 'black')}, transparent)`}
