@@ -4,6 +4,7 @@ import { RiHomeLine } from 'react-icons/ri'
 import { AiOutlineAppstore, AiOutlineDatabase, AiOutlineControl } from 'react-icons/ai'
 import ColorMode from 'functions/colorMode'
 import { Link, animateScroll as scroll } from 'react-scroll'
+import { ColorModeSwitcher } from 'theme/ColorModeSwitcher'
 
 export const NavButtons = props => {
     function scrollTop() {
@@ -11,6 +12,7 @@ export const NavButtons = props => {
     }
     return (
         <Flex direction="column" pos="fixed" zIndex={300} right={2} bottom="10%">
+            <ColorModeSwitcher />
             <Tooltip
                 label="Home"
                 placement="left"
