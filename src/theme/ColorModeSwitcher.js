@@ -11,10 +11,7 @@ export const ColorModeSwitcher = props => {
             onClick={toggleColorMode}
             icon={<SwitchIcon />}
             _focus={{ outline: 0 }}
-            pos="fixed"
-            top={1}
-            right={1}
-            zIndex={500}
+            zIndex={1100}
         />
     )
 }
