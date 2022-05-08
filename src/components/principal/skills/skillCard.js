@@ -1,4 +1,4 @@
-import { Center, Flex, Heading, Progress, ScaleFade } from '@chakra-ui/react'
+import { Center, Flex, Heading, ScaleFade } from '@chakra-ui/react'
 import ColorMode from 'functions/colorMode'
 import React from 'react'
 
@@ -43,16 +43,6 @@ export default function SkillCard(props) {
                 >
                     {props.icon}
                 </Flex>
-                <Progress
-                    colorScheme="pink"
-                    size="sm"
-                    value={props.value}
-                    max={10}
-                    w="100%"
-                    borderRadius="full"
-                    mb={5}
-                />
-                {props.value} / 10
             </Center>
         </ScaleFade>
     )
