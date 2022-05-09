@@ -7,8 +7,9 @@ export default function Shadenavbar({ inView }) {
     return (
         <Flex
             display={inView ? 'none' : 'flex'}
-            pos="sticky"
-            top={0}
+            pos="fixed"
+            bottom={0}
+            w="100%"
             zIndex={1000}
             bg={ColorMode('white', 'black')}
             color={ColorMode('black', 'white')}
