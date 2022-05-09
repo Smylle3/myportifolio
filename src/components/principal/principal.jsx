@@ -1,4 +1,4 @@
-import { Flex, Heading, ScaleFade } from '@chakra-ui/react'
+import { Flex, Heading, ScaleFade, Text } from '@chakra-ui/react'
 import ColorMode from 'functions/colorMode'
 import React, { useRef } from 'react'
 import { useInViewport } from 'react-in-viewport'
@@ -8,9 +8,12 @@ import pokecoin from '../../assets/07.png'
 import pomodoro from '../../assets/pomo.png'
 import TimeLine from './timeLine/timeLine'
 import { SiReact, SiFirebase } from 'react-icons/si'
+
 import Skills from './skills/skills'
 import AboutMe from './aboutMe/aboutMe'
 import Experience from './experience/experience'
+import Interesses from './personal/interesses'
+import { BsTriangleFill } from 'react-icons/bs'
 
 export default function Principal(props) {
     const ref = useRef(null)
@@ -33,7 +36,7 @@ export default function Principal(props) {
                     padding={5}
                     ref={ref}
                 >
-                    <Heading fontWeight={400} fontSize={40} mb={10}>
+                    <Heading fontWeight={400} fontSize={40} mb={10} cursor="default">
                         Destaque
                     </Heading>
                     <ScaleFade initialScale={0.5} in={inViewport}>
@@ -66,8 +69,9 @@ export default function Principal(props) {
                     </ScaleFade>
                 </Flex>
             </Element>
+
             <Element name="about" className="element">
-                <Flex direction="column" padding={5}>
+                <Flex direction="column" padding={5} cursor="default">
                     <Heading
                         fontWeight={400}
                         fontSize={40}
@@ -87,6 +91,7 @@ export default function Principal(props) {
                     />
                 </Flex>
             </Element>
+
             <Element name="projetos" className="element">
                 <Flex direction="column" padding={5}>
                     <Heading
@@ -96,6 +101,7 @@ export default function Principal(props) {
                         alignSelf="flex-end"
                         bg={ColorMode('white', 'black')}
                         color={ColorMode('black', 'white')}
+                        cursor="default"
                     >
                         Projetos
                     </Heading>
@@ -108,8 +114,9 @@ export default function Principal(props) {
                     />
                 </Flex>
             </Element>
+
             <Element name="skills" className="element">
-                <Flex direction="column" p={5}>
+                <Flex direction="column" p={5} cursor="default">
                     <Heading
                         fontWeight={400}
                         fontSize={40}
@@ -128,8 +135,9 @@ export default function Principal(props) {
                     />
                 </Flex>
             </Element>
+
             <Element name="exp" className="element">
-                <Flex direction="column" p={5}>
+                <Flex direction="column" p={5} cursor="default">
                     <Heading
                         fontWeight={400}
                         fontSize={40}
@@ -148,25 +156,42 @@ export default function Principal(props) {
                     />
                 </Flex>
             </Element>
-            <Element name="exp" className="element">
-                <Flex direction="column" p={5}>
-                <Heading
+
+            <Element name="personal" className="element">
+                <Flex
+                    direction="column"
+                    p={5}
+                    w="100%"
+                    justify="center"
+                    bg={ColorMode('black', 'white')}
+                    color={ColorMode('white', 'black')}
+                    mb={10}
+                    cursor="default"
+                >
+                    <Heading
                         fontWeight={400}
                         fontSize={40}
                         mb={10}
                         bg={ColorMode('white', 'black')}
                         color={ColorMode('black', 'white')}
-                        w='fit-content'
+                        w="fit-content"
                     >
                         Interesses
                     </Heading>
-                    
+                    <Interesses />
                     <Flex
                         bg={ColorMode('white', 'black')}
                         borderRadius="full"
                         h={1}
                         mt={5}
                     />
+                    <Flex align='center' justify='center' direction={{xl: 'row', sm: 'column'}} >
+                        <Text textAlign="center" mr={2}>
+                            © Copyright 2022 João Pedro. Developed with ReactJs. Deployed
+                            with Vercel
+                        </Text>
+                        <BsTriangleFill />
+                    </Flex>
                 </Flex>
             </Element>
         </>
