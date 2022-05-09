@@ -5,7 +5,7 @@ import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react'
 
 export default function Experience() {
     return (
-        <Flex>
+        <Flex cursor='default'>
             <Timeline lineColor={'white'} animate={true}>
                 <TimelineItem
                     key="001"
@@ -28,7 +28,7 @@ export default function Experience() {
                     <Heading fontSize={16} fontWeight={300}>
                         Dev Full Stack / Gerente de cobranças
                     </Heading>
-                    <Text textAlign="justify" mt={3}>
+                    <Text textAlign="justify" mt={3} >
                         Sou desenvolvedor Full Stack pela CJR uma das maiores empresas
                         júniores do Distrito Federal, já atuei em projetos internos e
                         externos, trabalhando em equipe buscando a melhor forma de
