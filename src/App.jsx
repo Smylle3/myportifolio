@@ -12,13 +12,14 @@ import { NavButtons } from 'components/navButtons'
 function App() {
     return (
         <Flex
-            direction={{ base: 'column', xxl: 'row' }}
+            //direction={{ base: 'column', xxl: 'row' }}
+            direction='column'
             bgImage={useMobile() ? backImageMobile : backImage}
             bgPos="center"
             bgSize="cover"
             bgRepeat="no-repeat"
         >
-            {useMobile() ? (
+            {true ? (
                 <>
                     <NavButtons />
                     <MobileNavBar />
