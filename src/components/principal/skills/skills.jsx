@@ -2,6 +2,8 @@ import { Flex, ScaleFade, SimpleGrid } from '@chakra-ui/react'
 import ColorMode from 'functions/colorMode'
 import React, { useRef } from 'react'
 import {
+    SiCss3,
+    SiGit,
     SiHtml5,
     SiJavascript,
     SiNextDotJs,
@@ -31,16 +33,24 @@ export default function Skills() {
                 p={5}
                 ref={ref}
             >
-                <SimpleGrid columns={{ xl: 3 }} spacing={5} w="full" h="100%">
+                <SimpleGrid columns={{ xl: 4, md: 2 }} spacing={5} w="full" h="100%">
                     <SkillCard
-                        title="Html/Css"
+                        title="Html5"
                         icon={
                             <SiHtml5
                                 color={`${ColorMode('black', 'white')}`}
                                 size="100px"
                             />
                         }
-                        value="8"
+                    />
+                    <SkillCard
+                        title="Css3"
+                        icon={
+                            <SiCss3
+                                color={`${ColorMode('black', 'white')}`}
+                                size="100px"
+                            />
+                        }
                     />
                     <SkillCard
                         title="JavaScript"
@@ -50,7 +60,6 @@ export default function Skills() {
                                 size="100px"
                             />
                         }
-                        value="7"
                     />
                     <SkillCard
                         title="React"
@@ -60,7 +69,6 @@ export default function Skills() {
                                 size="100px"
                             />
                         }
-                        value="7"
                     />
                     <SkillCard
                         title="Next Js"
@@ -70,7 +78,6 @@ export default function Skills() {
                                 size="100px"
                             />
                         }
-                        value="7"
                     />
                     <SkillCard
                         title="Ruby"
@@ -80,7 +87,6 @@ export default function Skills() {
                                 size="100px"
                             />
                         }
-                        value="5"
                     />
                     <SkillCard
                         title="Node Js"
@@ -90,7 +96,15 @@ export default function Skills() {
                                 size="100px"
                             />
                         }
-                        value="5"
+                    />
+                    <SkillCard
+                        title="Git"
+                        icon={
+                            <SiGit
+                                color={`${ColorMode('black', 'white')}`}
+                                size="100px"
+                            />
+                        }
                     />
                 </SimpleGrid>
             </Flex>
