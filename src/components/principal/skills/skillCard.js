@@ -10,10 +10,10 @@ export default function SkillCard(props) {
                 p={5}
                 border="2px solid"
                 borderRadius={5}
-                borderColor={`${ColorMode('#FF0080', '#7928CA')}`}
+                borderColor="white"
                 color="#FF0080"
                 _hover={{
-                    boxShadow: `0px 0px 5px 2px ${ColorMode('#7928CA', '#FF0080')}`,
+                    boxShadow: `0px 0px 5px 2px white`,
                     backgroundColor: ColorMode('rgba(255, 255, 255, 0.3)', 'black'),
                 }}
             >
@@ -24,13 +24,7 @@ export default function SkillCard(props) {
                     mb={5}
                     textAlign="center"
                     color={`${ColorMode('white', 'black')}`}
-                    bgGradient={`linear(to-l,${ColorMode(
-                        '#7928CA',
-                        '#FF0080'
-                    )}, ${ColorMode('#FF0080', '#7928CA')}, ${ColorMode(
-                        '#7928CA',
-                        '#FF0080'
-                    )})`}
+                    bg={`${ColorMode('gray.900', 'white')}`}
                     w="100%"
                 >
                     {props.title}
