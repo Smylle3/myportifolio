@@ -20,7 +20,7 @@ export default function SkillCard(props) {
                 <Heading
                     borderRadius={5}
                     fontWeight={400}
-                    fontSize={30}
+                    fontSize={20}
                     mb={5}
                     textAlign="center"
                     color={`${ColorMode('white', 'black')}`}
