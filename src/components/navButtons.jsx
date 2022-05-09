@@ -1,16 +1,17 @@
 import React from 'react'
-import { IconButton, Flex, Tooltip, useDisclosure, SlideFade } from '@chakra-ui/react'
-import { RiHomeLine } from 'react-icons/ri'
-import { AiOutlineAppstore, AiOutlineDatabase, AiOutlineControl } from 'react-icons/ai'
 import ColorMode from 'functions/colorMode'
+import { IconButton, Flex, Tooltip, useDisclosure, SlideFade } from '@chakra-ui/react'
 import { Link, animateScroll as scroll } from 'react-scroll'
 import { ColorModeSwitcher } from 'theme/ColorModeSwitcher'
+
+import { RiHomeLine } from 'react-icons/ri'
 import { SiAboutDotMe } from 'react-icons/si'
-import { BiLeftArrow, BiRightArrow } from 'react-icons/bi'
+import { BiFolder, BiLeftArrow, BiRightArrow } from 'react-icons/bi'
+import { AiOutlineAppstore, AiOutlineDatabase, AiOutlineControl } from 'react-icons/ai'
 
 export const NavButtons = () => {
     const { isOpen, onToggle } = useDisclosure()
-    
+
     return (
         <Flex direction="column" pos="fixed" zIndex={300} right={2} bottom="10%">
             <SlideFade offsetX={50} in={isOpen}>
@@ -122,6 +123,30 @@ export const NavButtons = () => {
                             <IconButton
                                 variant="zones"
                                 icon={<AiOutlineControl size={20} />}
+                                boxShadow={`1px 1px 3px 1px black`}
+                                _focus={{ outline: 0 }}
+                            />
+                        </Tooltip>
+                    </Link>
+
+                    <Link
+                        activeClass="active"
+                        to="exp"
+                        spy={true}
+                        smooth={true}
+                        duration={500}
+                        offset={0}
+                    >
+                        <Tooltip
+                            label="Experiência"
+                            placement="left"
+                            hasArrow
+                            bg={ColorMode('white', 'black')}
+                            color={ColorMode('black', 'white')}
+                        >
+                            <IconButton
+                                variant="zones"
+                                icon={<BiFolder size={20} />}
                                 boxShadow={`1px 1px 3px 1px black`}
                                 _focus={{ outline: 0 }}
                             />
