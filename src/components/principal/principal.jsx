@@ -9,6 +9,7 @@ import pomodoro from '../../assets/pomo.png'
 import TimeLine from './timeLine/timeLine'
 import { SiReact, SiFirebase } from 'react-icons/si'
 import Skills from './skills/skills'
+import AboutMe from './aboutMe/aboutMe'
 
 export default function Principal(props) {
     const ref = useRef(null)
@@ -64,6 +65,27 @@ export default function Principal(props) {
                     </ScaleFade>
                 </Flex>
             </Element>
+            <Element name="about" className="element">
+                <Flex direction="column" padding={5}>
+                    <Heading
+                        fontWeight={400}
+                        fontSize={40}
+                        mb={10}
+                        textAlign="center"
+                        bg={ColorMode('white', 'black')}
+                        color={ColorMode('black', 'white')}
+                    >
+                        Sobre o dev
+                    </Heading>
+                    <AboutMe />
+                    <Flex
+                        bg={ColorMode('white', 'black')}
+                        borderRadius="full"
+                        h={1}
+                        mt={5}
+                    />
+                </Flex>
+            </Element>
             <Element name="projetos" className="element">
                 <Flex direction="column" padding={5}>
                     <Heading
@@ -77,23 +99,28 @@ export default function Principal(props) {
                         Projetos
                     </Heading>
                     <TimeLine />
-                    <Flex bg="white" borderRadius="full" h={1} mt={5} />
+                    <Flex
+                        bg={ColorMode('white', 'black')}
+                        borderRadius="full"
+                        h={1}
+                        mt={5}
+                    />
                 </Flex>
             </Element>
-            <Flex direction="column" p={5}>
-                <Heading
-                    fontWeight={800}
-                    fontSize={40}
-                    mb={10}
-                    bg={ColorMode('white', 'black')}
-                    color={ColorMode('black', 'white')}
-                >
-                    <Element name="skills" className="element">
+            <Element name="skills" className="element">
+                <Flex direction="column" p={5}>
+                    <Heading
+                        fontWeight={400}
+                        fontSize={40}
+                        mb={10}
+                        bg={ColorMode('white', 'black')}
+                        color={ColorMode('black', 'white')}
+                    >
                         Habilidades
-                    </Element>
-                </Heading>
-                <Skills />
-            </Flex>
+                    </Heading>
+                    <Skills />
+                </Flex>
+            </Element>
         </>
     )
 }
