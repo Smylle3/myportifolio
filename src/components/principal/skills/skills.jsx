@@ -16,7 +16,7 @@ export default function Skills() {
     const ref = useRef(null)
     const { inViewport } = useInViewport(
         ref,
-        { rootMargin: '-150px' },
+        { rootMargin: '0px' },
         { disconnectOnLeave: false },
         {}
     )
@@ -36,7 +36,7 @@ export default function Skills() {
                         title="Html/Css"
                         icon={
                             <SiHtml5
-                                color={`${ColorMode('#7928CA', '#FF0080')}`}
+                                color={`${ColorMode('black', 'white')}`}
                                 size="100px"
                             />
                         }
@@ -46,7 +46,7 @@ export default function Skills() {
                         title="JavaScript"
                         icon={
                             <SiJavascript
-                                color={`${ColorMode('#7928CA', '#FF0080')}`}
+                                color={`${ColorMode('black', 'white')}`}
                                 size="100px"
                             />
                         }
@@ -56,7 +56,7 @@ export default function Skills() {
                         title="React"
                         icon={
                             <SiReact
-                                color={`${ColorMode('#7928CA', '#FF0080')}`}
+                                color={`${ColorMode('black', 'white')}`}
                                 size="100px"
                             />
                         }
@@ -66,7 +66,7 @@ export default function Skills() {
                         title="Next Js"
                         icon={
                             <SiNextDotJs
-                                color={`${ColorMode('#7928CA', '#FF0080')}`}
+                                color={`${ColorMode('black', 'white')}`}
                                 size="100px"
                             />
                         }
@@ -76,7 +76,7 @@ export default function Skills() {
                         title="Ruby"
                         icon={
                             <SiRuby
-                                color={`${ColorMode('#7928CA', '#FF0080')}`}
+                                color={`${ColorMode('black', 'white')}`}
                                 size="100px"
                             />
                         }
@@ -86,7 +86,7 @@ export default function Skills() {
                         title="Node Js"
                         icon={
                             <SiNodeDotJs
-                                color={`${ColorMode('#7928CA', '#FF0080')}`}
+                                color={`${ColorMode('black', 'white')}`}
                                 size="100px"
                             />
                         }
