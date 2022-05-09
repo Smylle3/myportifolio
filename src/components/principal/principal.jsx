@@ -117,7 +117,7 @@ export default function Principal(props) {
                         bg={ColorMode('white', 'black')}
                         color={ColorMode('black', 'white')}
                     >
-                        Habilidades
+                        Habilidades / Conhecimentos
                     </Heading>
                     <Skills />
                     <Flex
@@ -140,6 +140,27 @@ export default function Principal(props) {
                         Experiência
                     </Heading>
                     <Experience />
+                    <Flex
+                        bg={ColorMode('white', 'black')}
+                        borderRadius="full"
+                        h={1}
+                        mt={5}
+                    />
+                </Flex>
+            </Element>
+            <Element name="exp" className="element">
+                <Flex direction="column" p={5}>
+                <Heading
+                        fontWeight={400}
+                        fontSize={40}
+                        mb={10}
+                        bg={ColorMode('white', 'black')}
+                        color={ColorMode('black', 'white')}
+                        w='fit-content'
+                    >
+                        Interesses
+                    </Heading>
+                    
                     <Flex
                         bg={ColorMode('white', 'black')}
                         borderRadius="full"
