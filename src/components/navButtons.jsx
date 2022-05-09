@@ -7,6 +7,7 @@ import { ColorModeSwitcher } from 'theme/ColorModeSwitcher'
 import { RiHomeLine } from 'react-icons/ri'
 import { SiAboutDotMe } from 'react-icons/si'
 import { BiFolder, BiLeftArrow, BiRightArrow } from 'react-icons/bi'
+import { BsController } from 'react-icons/bs'
 import { AiOutlineAppstore, AiOutlineDatabase, AiOutlineControl } from 'react-icons/ai'
 
 export const NavButtons = () => {
@@ -147,6 +148,30 @@ export const NavButtons = () => {
                             <IconButton
                                 variant="zones"
                                 icon={<BiFolder size={20} />}
+                                boxShadow={`1px 1px 3px 1px black`}
+                                _focus={{ outline: 0 }}
+                            />
+                        </Tooltip>
+                    </Link>
+
+                    <Link
+                        activeClass="active"
+                        to="personal"
+                        spy={true}
+                        smooth={true}
+                        duration={500}
+                        offset={0}
+                    >
+                        <Tooltip
+                            label="Interesses"
+                            placement="left"
+                            hasArrow
+                            bg={ColorMode('white', 'black')}
+                            color={ColorMode('black', 'white')}
+                        >
+                            <IconButton
+                                variant="zones"
+                                icon={<BsController size={20} />}
                                 boxShadow={`1px 1px 3px 1px black`}
                                 _focus={{ outline: 0 }}
                             />
