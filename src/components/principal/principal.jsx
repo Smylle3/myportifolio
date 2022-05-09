@@ -10,6 +10,7 @@ import TimeLine from './timeLine/timeLine'
 import { SiReact, SiFirebase } from 'react-icons/si'
 import Skills from './skills/skills'
 import AboutMe from './aboutMe/aboutMe'
+import Experience from './experience/experience'
 
 export default function Principal(props) {
     const ref = useRef(null)
@@ -119,6 +120,32 @@ export default function Principal(props) {
                         Habilidades
                     </Heading>
                     <Skills />
+                    <Flex
+                        bg={ColorMode('white', 'black')}
+                        borderRadius="full"
+                        h={1}
+                        mt={5}
+                    />
+                </Flex>
+            </Element>
+            <Element name="exp" className="element">
+                <Flex direction="column" p={5}>
+                    <Heading
+                        fontWeight={400}
+                        fontSize={40}
+                        mb={10}
+                        bg={ColorMode('black', 'white')}
+                        color={ColorMode('white', 'black')}
+                    >
+                        Experiência
+                    </Heading>
+                    <Experience />
+                    <Flex
+                        bg={ColorMode('white', 'black')}
+                        borderRadius="full"
+                        h={1}
+                        mt={5}
+                    />
                 </Flex>
             </Element>
         </>
