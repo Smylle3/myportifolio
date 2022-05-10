@@ -3,18 +3,19 @@ import { Flex } from '@chakra-ui/react'
 import useMobile from 'functions/useMobile'
 import Principal from 'components/principal/principal'
 import SideBar from 'components/sideBar/sideBar'
-import backImage from './assets/bg.jpg'
 import backImageMobile from './assets/bgm.jpg'
 import MobileNavBar from 'components/mobileNavBar/mobileNavBar'
-import { Vertical } from 'animation/vertical'
 import { NavButtons } from 'components/navButtons'
+import WebPrincipal from 'components/webPrincipal/webPrincipal'
+import ColorMode from 'functions/colorMode'
 
 function App() {
     return (
         <Flex
+            direction="column"
             //direction={{ base: 'column', xxl: 'row' }}
-            direction='column'
-            bgImage={useMobile() ? backImageMobile : backImage}
+            bgColor={ColorMode('gray.100', 'gray.800')}
+            bgImage={useMobile() ? backImageMobile : backImageMobile}
             bgPos="center"
             bgSize="cover"
             bgRepeat="no-repeat"
@@ -28,7 +29,7 @@ function App() {
             ) : (
                 <>
                     <SideBar />
-                    <Vertical />
+                    <WebPrincipal />
                 </>
             )}
         </Flex>
