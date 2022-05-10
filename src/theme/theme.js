@@ -11,6 +11,7 @@ const themes = extendTheme({
         lg: '620px',
         xl: '768px',
         xxl: '1000px',
+        xxxl: '1280px',
     },
     fonts: {
         body: 'Open Sans',
