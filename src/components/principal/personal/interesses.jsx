@@ -9,7 +9,7 @@ import { RiMovieFill, RiPlaneFill } from 'react-icons/ri'
 import { useInViewport } from 'react-in-viewport'
 import SkillCard from '../skills/skillCard'
 
-export default function Skills() {
+export default function Interesses() {
     const ref = useRef(null)
     const { inViewport } = useInViewport(
         ref,
