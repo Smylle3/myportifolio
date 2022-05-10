@@ -1,40 +1,32 @@
 import { Flex } from '@chakra-ui/react'
-import { AnimationButton } from 'animation/animationButton'
-import MySlider from 'components/principal/slider/slider'
+import { Vertical } from 'animation/vertical'
 import ColorMode from 'functions/colorMode'
-import React, { useState } from 'react'
-import { BiRightArrow, BiLeftArrow } from 'react-icons/bi'
+import React from 'react'
+import AbouteMe from './aboutMe/abouteMe'
+import Destaques from './destaques/destaques'
+import ExperienceWeb from './experience/experience'
+import InteressesWeb from './InteressesWeb/InteressesWeb'
+import Projects from './projects/projects'
+import SkillsWeb from './skills/webSkills'
 
 export default function WebPrincipal() {
-    const [pages, setPages] = useState(1)
-
     return (
-        <Flex
-            h="100vh"
-            w={{ base: '100%', xxl: '80%' }}
-            justify='center'
-            overflowY="scroll"
-            css={{
-                '&::-webkit-scrollbar': {
-                    width: '5px',
-                },
-                '&::-webkit-scrollbar-thumb': {
-                    background: `${ColorMode('white', 'orange')}`,
-                    borderRadius: '25px',
-                },
-                '&::-webkit-scrollbar-track': {
-                    width: '5px',
-                    margin: '25px',
-                },
-            }}
-        >
-            <AnimationButton onClick={() => setPages(pages - 1)} direction="r" left={0}>
-                <BiLeftArrow size="55px" color={ColorMode('white', 'orange')} />
-            </AnimationButton>
-            <MySlider pages={pages} setPages={setPages} />
-            <AnimationButton onClick={() => setPages(pages + 1)} direction="l" right={0}>
-                <BiRightArrow size="55px" color={ColorMode('white', 'orange')} />
-            </AnimationButton>
+        <Flex direction="row">
+            <Flex w="20%" />
+            <Vertical />
+            <Flex direction="column" w="80%" p={5}>
+                <AbouteMe />
+                <Flex bg={ColorMode('black', 'white')} h={1} mt={5} mb={5} />
+                <Destaques />
+                <Flex bg={ColorMode('black', 'white')} h={1} mt={5} mb={5} />
+                <Projects />
+                <Flex bg={ColorMode('black', 'white')} h={1} mt={5} mb={5} />
+                <ExperienceWeb />
+                <Flex bg={ColorMode('black', 'white')} h={1} mt={5} mb={5} />
+                <SkillsWeb />
+                <Flex bg={ColorMode('black', 'white')} h={1} mt={5} mb={5} />
+                <InteressesWeb />
+            </Flex>
         </Flex>
     )
 }
