@@ -4,22 +4,21 @@ import { Center, Flex, Heading, Image, Text } from '@chakra-ui/react'
 import photo from '../../assets/perfil.jpg'
 import ColorMode from 'functions/colorMode'
 import TextGroup from './components/textGroup'
+import { ColorModeSwitcher } from 'theme/ColorModeSwitcher'
 
 export default function SideBar() {
     return (
-        <Center w="20%">
+        <Center w="20%" h="100%" flexDirection="column" cursor="default" position="fixed">
+            <ColorModeSwitcher />
             <Flex
-                border={`2px solid ${ColorMode('white', 'orange')}`}
-                bgGradient={`linear(to-b, ${ColorMode('white', 'black')}, transparent)`}
-                backdropFilter="auto"
-                backdropBlur="10px"
-                color={ColorMode('black', 'orange')}
+                boxShadow={`0px 0px 3px 0px ${ColorMode('black', 'white')}`}
+                color={ColorMode('black', 'white')}
                 h="80%"
                 w="85%"
                 align="center"
                 textAlign="center"
                 padding="25px 0px"
-                borderRadius={10}
+                borderRadius={4}
                 flexDirection="column"
                 overflowY="scroll"
                 css={{
@@ -27,7 +26,7 @@ export default function SideBar() {
                         width: '5px',
                     },
                     '&::-webkit-scrollbar-thumb': {
-                        background: `${ColorMode('white', 'orange')}`,
+                        background: `${ColorMode('white', 'black')}`,
                         borderRadius: '25px',
                     },
                     '&::-webkit-scrollbar-track': {
@@ -41,8 +40,7 @@ export default function SideBar() {
                     src={photo}
                     w="70%"
                     borderRadius="full"
-                    border={`3px solid ${ColorMode('white', 'orange')}`}
-                    boxShadow={`1px 1px 10px -1px ${ColorMode('black', 'black')}`}
+                    boxShadow={`1px 1px 3px 0px ${ColorMode('black', 'white')}`}
                 />
                 <Heading fontWeight={300}>João Pedro</Heading>
                 <Text>Frontend Developer</Text>
