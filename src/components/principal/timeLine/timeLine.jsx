@@ -10,8 +10,7 @@ import {
     Text,
 } from '@chakra-ui/react'
 import ColorMode from 'functions/colorMode'
-import React, { useRef } from 'react'
-import { useInViewport } from 'react-in-viewport'
+import React from 'react'
 import ButtonRef from './buttonRef'
 import {
     SiJavascript,
@@ -22,30 +21,27 @@ import {
     SiHtml5,
     SiSpring,
 } from 'react-icons/si'
+import { useInView } from 'react-intersection-observer'
 
 export default function TimeLine() {
-    const ref = useRef(null)
-    const { inViewport } = useInViewport(
-        ref,
-        { rootMargin: '0px' },
-        { disconnectOnLeave: false },
-        {}
-    )
+    const { ref, inView } = useInView({
+        threshold: 0,
+    })
 
     return (
-        <ScaleFade initialScale={0.5} in={inViewport}>
-            <Flex color={ColorMode('white', 'black')} h="100%" ref={ref} p={4} >
-                <SimpleGrid columns={{ xl: 2 }} spacing={5} w="full" h="100%">
-                    <ScaleFade in whileHover={{scale: 1.1}} >
+        <ScaleFade initialScale={0.5} in={inView}>
+            <Flex color={ColorMode('white', 'black')} h="100%" ref={ref} p={3}>
+                <SimpleGrid columns={{ xl: 2, xxxl: 3 }} spacing={5} w="full" h="100%">
+                    <ScaleFade in whileHover={{ scale: 1.1 }}>
                         <Flex
-                            bg={ColorMode('gray.900', 'white')}
+                            bg={ColorMode('white', 'gray.900')}
+                            color={ColorMode('black', 'white')}
                             direction="column"
                             align="center"
                             p={3}
                             h="100%"
-                            boxShadow={`0px 0px 5px 1px  ${ColorMode('white', 'black')}`}
+                            boxShadow={`0px 0px 3px 0px  ${ColorMode('black', 'white')}`}
                             borderRadius={3}
-                            
                         >
                             <HStack>
                                 <Tag color="white" bg="orange">
@@ -71,16 +67,16 @@ export default function TimeLine() {
                         </Flex>
                     </ScaleFade>
 
-                    <ScaleFade whileHover={{scale: 1.1}} in>
+                    <ScaleFade whileHover={{ scale: 1.1 }} in>
                         <Flex
-                            bg={ColorMode('gray.900', 'white')}
+                            bg={ColorMode('white', 'gray.900')}
+                            color={ColorMode('black', 'white')}
                             direction="column"
                             align="center"
                             p={3}
                             h="100%"
-                            boxShadow={`0px 0px 5px 1px  ${ColorMode('white', 'black')}`}
+                            boxShadow={`0px 0px 3px 0px  ${ColorMode('black', 'white')}`}
                             borderRadius={3}
-                            
                         >
                             <HStack>
                                 <Tag color="white" bg="blue.400">
@@ -108,17 +104,16 @@ export default function TimeLine() {
                         </Flex>
                     </ScaleFade>
 
-                    <ScaleFade whileHover={{scale: 1.1}} in>
+                    <ScaleFade whileHover={{ scale: 1.1 }} in>
                         <Flex
                             bg={ColorMode('white', 'gray.900')}
                             color={ColorMode('black', 'white')}
-                            boxShadow={`0px 0px 5px 1px  ${ColorMode('black', 'white')}`}
+                            boxShadow={`0px 0px 3px 0px  ${ColorMode('black', 'white')}`}
                             direction="column"
                             align="center"
                             p={3}
                             h="100%"
                             borderRadius={3}
-                            
                         >
                             <HStack>
                                 <Tag color="white" bg="blue.400">
@@ -147,17 +142,16 @@ export default function TimeLine() {
                         </Flex>
                     </ScaleFade>
 
-                    <ScaleFade whileHover={{scale: 1.1}} in>
+                    <ScaleFade whileHover={{ scale: 1.1 }} in>
                         <Flex
                             bg={ColorMode('white', 'gray.900')}
                             color={ColorMode('black', 'white')}
-                            boxShadow={`0px 0px 5px 1px  ${ColorMode('black', 'white')}`}
+                            boxShadow={`0px 0px 3px 0px  ${ColorMode('black', 'white')}`}
                             direction="column"
                             align="center"
                             p={3}
                             h="100%"
                             borderRadius={3}
-                            
                         >
                             <HStack>
                                 <Tag color="white" bg="black">
@@ -187,16 +181,16 @@ export default function TimeLine() {
                         </Flex>
                     </ScaleFade>
 
-                    <ScaleFade whileHover={{scale: 1.1}} in>
+                    <ScaleFade whileHover={{ scale: 1.1 }} in>
                         <Flex
-                            bg={ColorMode('gray.900', 'white')}
+                            bg={ColorMode('white', 'gray.900')}
+                            color={ColorMode('black', 'white')}
                             direction="column"
                             align="center"
                             p={3}
                             h="100%"
-                            boxShadow={`0px 0px 5px 1px  ${ColorMode('white', 'black')}`}
+                            boxShadow={`0px 0px 3px 0px  ${ColorMode('black', 'white')}`}
                             borderRadius={3}
-                            
                         >
                             <HStack>
                                 <Tag color="white" bg="blue.400">
