@@ -4,6 +4,7 @@ import useMobile from 'functions/useMobile'
 import Principal from 'components/principal/principal'
 import SideBar from 'components/sideBar/sideBar'
 import backImageMobile from './assets/bgm.jpg'
+import backImage from './assets/bg.jpg'
 import MobileNavBar from 'components/mobileNavBar/mobileNavBar'
 import { NavButtons } from 'components/navButtons'
 import WebPrincipal from 'components/webPrincipal/webPrincipal'
@@ -14,8 +15,8 @@ function App() {
         <Flex
             direction="column"
             //direction={{ base: 'column', xxl: 'row' }}
-            bgColor={ColorMode('gray.100', 'gray.800')}
-            bgImage={useMobile() ? backImageMobile : backImageMobile}
+            bgColor={ColorMode('purple.100', 'purple.800')}
+            bgImage={useMobile() ? backImage : backImage}
             bgPos="center"
             bgSize="cover"
             bgRepeat="no-repeat"
