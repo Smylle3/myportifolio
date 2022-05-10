@@ -184,8 +184,8 @@ export const NavButtons = () => {
                 variant="solid"
                 size="xs"
                 isRound
-                w={5}
-                h={6}
+                w={{base: 5, xxl: 10}}
+                h={{base: 6, xxl: 10}}
                 _focus={{ outline: 0 }}
                 onClick={onToggle}
                 icon={isOpen ? <BiRightArrow /> : <BiLeftArrow />}
