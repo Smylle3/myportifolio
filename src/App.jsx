@@ -1,6 +1,5 @@
 import React from 'react'
 import { Flex } from '@chakra-ui/react'
-import useMobile from 'functions/useMobile'
 import Principal from 'components/principal/principal'
 import SideBar from 'components/sideBar/sideBar'
 import backImage from './assets/bg.jpg'
@@ -15,7 +14,7 @@ function App() {
             direction="column"
             //direction={{ base: 'column', xxl: 'row' }}
             bgColor={ColorMode('purple.100', 'purple.800')}
-            bgImage={useMobile() ? backImage : backImage}
+            bgImage={backImage}
             bgPos="center"
             bgSize="cover"
             bgRepeat="no-repeat"
