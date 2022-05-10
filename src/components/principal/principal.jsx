@@ -1,4 +1,4 @@
-import { Flex, Heading, ScaleFade, Text } from '@chakra-ui/react'
+import { Flex, Heading, ScaleFade, SimpleGrid, Text } from '@chakra-ui/react'
 import ColorMode from 'functions/colorMode'
 import React, { useRef } from 'react'
 import { useInViewport } from 'react-in-viewport'
@@ -39,34 +39,36 @@ export default function Principal(props) {
                     <Heading fontWeight={400} fontSize={40} mb={10} cursor="default">
                         Destaque
                     </Heading>
-                    <ScaleFade initialScale={0.5} in={inViewport}>
-                        <MyAccordion
-                            title="PokéCoin"
-                            image={pokecoin}
-                            date="Abril / 2022"
-                            abreviation="Oficialmente meu primeiro projeto, PokeCoin é uma plataforma de negociação de pokémons. Desenvolvido com ReactJs e bando de dados com Firebase realizei esse projeto para adquirir conhecimentos no desenvolvimento frontend. O período de desenvolvimento foi dado por volta de um mês."
-                            rep="https://github.com/Smylle3/poke_coin"
-                            site="https://poke-coin.vercel.app/"
-                            framework="React Js"
-                            styles="Chakra Ui"
-                            backend="Firebase"
-                            frameIcon={SiReact}
-                            frameBack={SiFirebase}
-                        />
-                    </ScaleFade>
-                    <ScaleFade initialScale={0.5} in={inViewport}>
-                        <MyAccordion
-                            title="My Pomodoro"
-                            image={pomodoro}
-                            date="Abril / 2022"
-                            abreviation="Aplicação realizada como desafio de criar cronômetro pomodoro para gerenciar tempo de trabalho e descanso. Feito com ReactJs e ChakraUI para estilização."
-                            rep="https://github.com/Smylle3/mypomodore"
-                            site="https://mypomodore.vercel.app/"
-                            framework="React Js"
-                            styles="Chakra Ui"
-                            frameIcon={SiReact}
-                        />
-                    </ScaleFade>
+                    <SimpleGrid columns={{base: 1, xxl: 2}} spacing={5} >
+                        <ScaleFade initialScale={0.5} in={inViewport}>
+                            <MyAccordion
+                                title="PokéCoin"
+                                image={pokecoin}
+                                date="Abril / 2022"
+                                abreviation="Oficialmente meu primeiro projeto, PokeCoin é uma plataforma de negociação de pokémons. Desenvolvido com ReactJs e bando de dados com Firebase realizei esse projeto para adquirir conhecimentos no desenvolvimento frontend. O período de desenvolvimento foi dado por volta de um mês."
+                                rep="https://github.com/Smylle3/poke_coin"
+                                site="https://poke-coin.vercel.app/"
+                                framework="React Js"
+                                styles="Chakra Ui"
+                                backend="Firebase"
+                                frameIcon={SiReact}
+                                frameBack={SiFirebase}
+                            />
+                        </ScaleFade>
+                        <ScaleFade initialScale={0.5} in={inViewport}>
+                            <MyAccordion
+                                title="My Pomodoro"
+                                image={pomodoro}
+                                date="Abril / 2022"
+                                abreviation="Aplicação realizada como desafio de criar cronômetro pomodoro para gerenciar tempo de trabalho e descanso. Feito com ReactJs e ChakraUI para estilização."
+                                rep="https://github.com/Smylle3/mypomodore"
+                                site="https://mypomodore.vercel.app/"
+                                framework="React Js"
+                                styles="Chakra Ui"
+                                frameIcon={SiReact}
+                            />
+                        </ScaleFade>
+                    </SimpleGrid>
                 </Flex>
             </Element>
 
@@ -185,7 +187,11 @@ export default function Principal(props) {
                         h={1}
                         mt={5}
                     />
-                    <Flex align='center' justify='center' direction={{xl: 'row', sm: 'column'}} >
+                    <Flex
+                        align="center"
+                        justify="center"
+                        direction={{ xl: 'row', sm: 'column' }}
+                    >
                         <Text textAlign="center" mr={2}>
                             © Copyright 2022 João Pedro. Developed with ReactJs. Deployed
                             with Vercel
