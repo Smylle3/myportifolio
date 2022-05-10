@@ -44,6 +44,43 @@ export default function TimeLine() {
                             borderRadius={3}
                         >
                             <HStack>
+                                <Tag color="white" bg="blue.400">
+                                    <TagLeftIcon boxSize="12px" as={SiReact} /> React Js
+                                </Tag>
+                                <Tag color="white" bg="grenn.400">
+                                    <TagLeftIcon boxSize="12px" /> Chakra UI
+                                </Tag>
+                            </HStack>
+                            <Heading fontWeight={300} fontSize={35} margin={1}>
+                                MyPortifolio
+                            </Heading>
+                            <Text textAlign="justify" mb={5}>
+                                Maio / 2022
+                            </Text>
+                            <Text mb={5} textAlign="justify">
+                                Meu website com o intuito de manter registrado e
+                                atualizados meus projetos e aprendizados bem como servir
+                                de apresentação e curriculo.
+                            </Text>
+                            <ButtonRef
+                                rep="https://github.com/Smylle3/myportifolio"
+                                site="https://smylleportifolio.vercel.app/"
+                            />
+                        </Flex>
+                    </ScaleFade>
+
+                    <ScaleFade in whileHover={{ scale: 1.1 }}>
+                        <Flex
+                            bg={ColorMode('white', 'gray.900')}
+                            color={ColorMode('black', 'white')}
+                            direction="column"
+                            align="center"
+                            p={3}
+                            h="100%"
+                            boxShadow={`0px 0px 3px 0px  ${ColorMode('black', 'white')}`}
+                            borderRadius={3}
+                        >
+                            <HStack>
                                 <Tag color="white" bg="orange">
                                     <TagLeftIcon boxSize="12px" as={SiJavascript} />{' '}
                                     JavaScript
