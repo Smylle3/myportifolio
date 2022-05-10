@@ -5,7 +5,6 @@ export const Vertical = props => {
     return (
         <Box
             w="2px"
-            h="100vh"
             bgGradient={`linear(to-b, ${ColorMode(
                 'red',
                 'purple'
