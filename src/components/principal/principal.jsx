@@ -7,7 +7,7 @@ import { Element } from 'react-scroll'
 import pokecoin from '../../assets/07.png'
 import pomodoro from '../../assets/pomo.png'
 import TimeLine from './timeLine/timeLine'
-import { SiReact, SiFirebase } from 'react-icons/si'
+import { SiReact, SiFirebase, SiBootstrap } from 'react-icons/si'
 
 import Skills from './skills/skills'
 import AboutMe from './aboutMe/aboutMe'
@@ -57,15 +57,16 @@ export default function Principal(props) {
                         </ScaleFade>
                         <ScaleFade initialScale={0.5} in={inViewport}>
                             <MyAccordion
-                                title="My Pomodoro"
+                                title="DSMovie"
                                 image={pomodoro}
-                                date="Abril / 2022"
-                                abreviation="Aplicação realizada como desafio de criar cronômetro pomodoro para gerenciar tempo de trabalho e descanso. Feito com ReactJs e ChakraUI para estilização."
-                                rep="https://github.com/Smylle3/mypomodore"
-                                site="https://mypomodore.vercel.app/"
+                                date="Maio / 2022"
+                                abreviation="Aplicação com design minimalista realizada atraves de um curso oferecido pela DevSuperior e otimizada por mim, de forma a aprender mais sobre consumos de API e coodificação com TypeScript. O objetivo da aplicação é buscar e encontrar um filme ou série e assim informar seus detalhes."
+                                rep="https://github.com/Smylle3/dsmovie"
+                                site="https://dsmovie-smylle.vercel.app/"
                                 framework="React Js"
-                                styles="Chakra Ui"
+                                styles="Bootstrap"
                                 frameIcon={SiReact}
+                                frameStyle={SiBootstrap}
                             />
                         </ScaleFade>
                     </SimpleGrid>
