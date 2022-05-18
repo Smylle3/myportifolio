@@ -72,7 +72,7 @@ export default function MyAccordion(props) {
                     <Heading fontWeight={300} fontSize={35} marginBottom={5}>
                         {props.title}
                     </Heading>
-                    <Image src={props.image} alt={props.tilte} />
+                    <Image src={props.image} alt={props.tilte} borderRadius={5} />
                     <AccordionIcon />
                 </AccordionButton>
                 <AccordionPanel>
