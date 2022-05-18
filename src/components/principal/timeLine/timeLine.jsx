@@ -30,7 +30,13 @@ export default function TimeLine() {
 
     return (
         <ScaleFade initialScale={0.5} in={inView}>
-            <Flex color={ColorMode('white', 'black')} h="100%" ref={ref} p={3}>
+            <Flex
+                color={ColorMode('white', 'black')}
+                h="100%"
+                ref={ref}
+                p={3}
+                cursor="default"
+            >
                 <SimpleGrid columns={{ xl: 2, xxxl: 3 }} spacing={5} w="full" h="100%">
                     <ScaleFade in whileHover={{ scale: 1.1 }}>
                         <Flex
@@ -47,7 +53,44 @@ export default function TimeLine() {
                                 <Tag color="white" bg="blue.400">
                                     <TagLeftIcon boxSize="12px" as={SiReact} /> React Js
                                 </Tag>
-                                <Tag color="white" bg="grenn.400">
+                                <Tag color="white" bg="green.300">
+                                    <TagLeftIcon boxSize="12px" /> Chakra UI
+                                </Tag>
+                            </HStack>
+                            <Heading fontWeight={300} fontSize={35} margin={1}>
+                                Pomodore
+                            </Heading>
+                            <Text textAlign="justify" mb={5}>
+                                Abril / 2022
+                            </Text>
+                            <Text mb={5} textAlign="justify">
+                                Aplicação realizada como desafio de criar um cronômetro
+                                pomodoro para gerenciar tempo e descanso. Feito com
+                                ReactJs e ChakraUI para estilização.
+                            </Text>
+                            <ButtonRef
+                                rep="https://github.com/Smylle3/myportifolio"
+                                site="https://smylleportifolio.vercel.app/"
+                            />
+                        </Flex>
+                    </ScaleFade>
+
+                    <ScaleFade in whileHover={{ scale: 1.1 }}>
+                        <Flex
+                            bg={ColorMode('white', 'gray.900')}
+                            color={ColorMode('black', 'white')}
+                            direction="column"
+                            align="center"
+                            p={3}
+                            h="100%"
+                            boxShadow={`0px 0px 3px 0px  ${ColorMode('black', 'white')}`}
+                            borderRadius={3}
+                        >
+                            <HStack>
+                                <Tag color="white" bg="blue.400">
+                                    <TagLeftIcon boxSize="12px" as={SiReact} /> React Js
+                                </Tag>
+                                <Tag color="white" bg="green.300">
                                     <TagLeftIcon boxSize="12px" /> Chakra UI
                                 </Tag>
                             </HStack>
@@ -245,9 +288,13 @@ export default function TimeLine() {
                                 Janeiro / 2022
                             </Text>
                             <Text mb={5} textAlign="justify">
-                                Aplicação para avaliar filmes, desenvolvida a partir de um
-                                curso disponibilizado pela{' '}
-                                <Link href="https://learn.devsuperior.com/" isExternal>
+                                Versão antiga de uma aplicação para avaliar filmes,
+                                desenvolvida a partir de um curso disponibilizado pela{' '}
+                                <Link
+                                    href="https://learn.devsuperior.com/"
+                                    isExternal
+                                    color="blue.400"
+                                >
                                     DevSuperior
                                 </Link>{' '}
                                 com frontend em React Js e backend em SpringBoot.
