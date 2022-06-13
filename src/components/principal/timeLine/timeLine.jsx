@@ -22,6 +22,7 @@ import {
     SiSpring,
 } from 'react-icons/si'
 import { useInView } from 'react-intersection-observer'
+import { AiOutlineAntDesign } from 'react-icons/ai'
 
 export default function TimeLine() {
     const { ref, inView } = useInView({
@@ -38,6 +39,45 @@ export default function TimeLine() {
                 cursor="default"
             >
                 <SimpleGrid columns={{ xl: 2, xxxl: 3 }} spacing={5} w="full" h="100%">
+                    <ScaleFade in whileHover={{ scale: 1.1 }}>
+                        <Flex
+                            bg={ColorMode('white', 'gray.900')}
+                            color={ColorMode('black', 'white')}
+                            direction="column"
+                            align="center"
+                            p={3}
+                            h="100%"
+                            boxShadow={`0px 0px 3px 0px  ${ColorMode('black', 'white')}`}
+                            borderRadius={3}
+                        >
+                            <HStack>
+                                <Tag color="white" bg="blue.400">
+                                    <TagLeftIcon boxSize="12px" as={SiReact} /> React Js
+                                </Tag>
+                                <Tag color="white" bg="gray.300">
+                                    <TagLeftIcon boxSize="12px" as={AiOutlineAntDesign} />{' '}
+                                    Chakra UI
+                                </Tag>
+                            </HStack>
+                            <Heading fontWeight={300} fontSize={35} margin={1}>
+                                YourTasks
+                            </Heading>
+                            <Text textAlign="justify" mb={5}>
+                                Junho / 2022
+                            </Text>
+                            <Text mb={5} textAlign="justify">
+                                Aplicação simples feita para organizar as tarefas do
+                                usuário, criar listas de afazeres e afins, ainda em
+                                desenvolvimento para implementação de um cronometro
+                                pomodoro.
+                            </Text>
+                            <ButtonRef
+                                rep="https://github.com/Smylle3/yourtasks"
+                                site="https://yourtasks.vercel.app/"
+                            />
+                        </Flex>
+                    </ScaleFade>
+
                     <ScaleFade in whileHover={{ scale: 1.1 }}>
                         <Flex
                             bg={ColorMode('white', 'gray.900')}
