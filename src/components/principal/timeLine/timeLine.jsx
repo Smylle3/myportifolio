@@ -54,9 +54,9 @@ export default function TimeLine() {
                                 <Tag color="white" bg="blue.400">
                                     <TagLeftIcon boxSize="12px" as={SiReact} /> React Js
                                 </Tag>
-                                <Tag color="white" bg="gray.300">
+                                <Tag color="white" bg="gray.500">
                                     <TagLeftIcon boxSize="12px" as={AiOutlineAntDesign} />{' '}
-                                    Chakra UI
+                                    Ant Design
                                 </Tag>
                             </HStack>
                             <Heading fontWeight={300} fontSize={35} margin={1}>
